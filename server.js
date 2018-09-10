@@ -8,6 +8,6 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.listen(process.env.PORT ? process.env.PORT : 8080, process.env.HOST ? process.env.HOST : '127.0.0.1', () => {
+app.listen(process.env.PORT || 8080, () => {
   console.log('server is live');
 })
